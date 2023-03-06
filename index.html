@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Js-Crud</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8 p-5 m-auto info-inputs mt-3">
+                <label for="productName">Product Name</label>
+                <input type="text" name="productName" id="productName" class="form-control">
+                <label for="productPrice">Product Price</label>
+                <input type="text" name="productPrice" id="productPrice" class="form-control">
+    
+                <label for="productCategory">Product Category</label>
+                <input type="text" name="productCategory" id="productCategory" class="form-control">
+    
+                <textarea name="" id="productDesc" cols="85" rows="5" class="form-control my-3" placeholder="comments"></textarea>
+                <button type="submit" class="btn btn-warning btn-sub text-light disabled" id="btn-updated">Add Product</button>
+                <button onclick="clearInputsForm()" type="submit" class="btn btn-danger">Reset</button>
+                <input type="text" name="" id="" class="form-control mt-5" oninput="search(this.value)" placeholder="search by name">
+            </div>
+        </div>
+            
+        <div class="row ">
+            <div class="col-md-8 m-auto text-light">
+                        <table class="my-5 table text-center">
+                            <thead class="text-danger"> 
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>description</th>
+                            </thead>
+                            <tbody id='tableBody' class="text-light"></tbody>
+                        </table>
+            </div>
+        </div>
+            
+    </div>
+    
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
